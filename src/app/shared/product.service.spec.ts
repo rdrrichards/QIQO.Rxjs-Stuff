@@ -5,12 +5,11 @@ import { ProductService } from './product.service';
 
 describe('ProductService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [ HttpClientTestingModule ],
-    providers: [ { provide: 'BASE_URL', useValue: '' } ]
+    imports: [ HttpClientTestingModule ]
   }));
 
   it('should be created', () => {
-    const service: ProductService = TestBed.get(ProductService);
+    const service: ProductService = TestBed.inject(ProductService);
     expect(service).toBeTruthy();
   });
 });

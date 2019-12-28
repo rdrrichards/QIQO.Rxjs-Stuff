@@ -5,12 +5,11 @@ import { OrderFacadeService } from './order-facade.service';
 
 describe('OrderFacadeService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [ HttpClientTestingModule ],
-    providers: [ { provide: 'BASE_URL', useValue: '' } ]
+    imports: [ HttpClientTestingModule ]
   }));
 
   it('should be created', () => {
-    const service: OrderFacadeService = TestBed.get(OrderFacadeService);
+    const service: OrderFacadeService = TestBed.inject(OrderFacadeService);
     expect(service).toBeTruthy();
   });
 });

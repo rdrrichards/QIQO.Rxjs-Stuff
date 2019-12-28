@@ -6,7 +6,7 @@ describe('InMemoryDataService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: InMemoryDataService = TestBed.get(InMemoryDataService);
+    const service: InMemoryDataService = TestBed.inject(InMemoryDataService);
     expect(service).toBeTruthy();
   });
 });

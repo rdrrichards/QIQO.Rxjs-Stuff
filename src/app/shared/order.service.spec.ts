@@ -5,12 +5,11 @@ import { OrderService } from './order.service';
 
 describe('OrderService', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [ HttpClientTestingModule ],
-    providers: [ { provide: 'BASE_URL', useValue: '' } ]
+    imports: [ HttpClientTestingModule ]
   }));
 
   it('should be created', () => {
-    const service: OrderService = TestBed.get(OrderService);
+    const service: OrderService = TestBed.inject(OrderService);
     expect(service).toBeTruthy();
   });
 });
