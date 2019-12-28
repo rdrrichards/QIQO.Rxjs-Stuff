@@ -10,7 +10,7 @@ describe('OrderFacadeService', () => {
   }));
 
   it('should be created', () => {
-    const service: OrderFacadeService = TestBed.inject(OrderFacadeService);
+    const service: OrderFacadeService = TestBed.get(OrderFacadeService);
     expect(service).toBeTruthy();
   });
 });
