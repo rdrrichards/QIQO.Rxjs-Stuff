@@ -1,0 +1,4 @@
+<p>ORDER</p>
+<div *ngIf="order$ | async as order">
+  <pre>{{ order | json }}</pre>
+</div>
