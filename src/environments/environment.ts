@@ -3,5 +3,7 @@ export const environment = {
   ordersUrl: 'api/orders',
   orderLinesUrl: 'api/orderLines',
   customersUrl: 'api/customers',
-  productsUrl: 'api/products'
+  productsUrl: 'api/products',
+  peopleUrl: 'api/people',
+  homeworldUrl: 'api/homeworlds'
 };

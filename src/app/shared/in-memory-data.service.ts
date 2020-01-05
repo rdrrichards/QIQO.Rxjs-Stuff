@@ -38,6 +38,14 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 2, productCode: 'PRD002', productName: 'Product 002' },
       { id: 3, productCode: 'PRD003', productName: 'Product 003' }
     ];
-    return { orders, orderLines, customers, products };
+    const people: any = { results: [
+      {id: 'Luke Skywalker', homeworld: 'api/homeworlds/1'},
+      {id: 'Leia Organa', homeworld: 'api/homeworlds/2'}
+    ]};
+    const homeworlds: any[] = [
+      {id: 1, name: 'Tatooine'},
+      {id: 2, name: 'Alderaan'}
+    ];
+    return { orders, orderLines, customers, products, people, homeworlds };
   }
 }
