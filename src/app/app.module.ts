@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { OrderComponent } from './order/order.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StarWarsComponent } from './star-wars/star-wars.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OrderComponent,
-    StarWarsComponent
+    StarWarsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
