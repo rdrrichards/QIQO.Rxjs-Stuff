@@ -1,9 +1,9 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Order, OrderLine } from '../models';
 import { Observable } from 'rxjs';
 import { ProductService } from './product.service';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -18,7 +18,6 @@ export class OrderService {
     return this.http.get<OrderLine[]>(`${environment.orderLinesUrl}?orderId=${id}`).pipe(
       map(lines => {
         lines.map(l => this.productService.getProduct(l.productId).subscribe(
-          // tap(prod => console.log('prod', prod)),
           prod => l.product = prod
         ));
         return lines;
