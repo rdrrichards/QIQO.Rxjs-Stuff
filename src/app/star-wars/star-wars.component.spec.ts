@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { StarWarsComponent } from './star-wars.component';
@@ -7,7 +7,7 @@ describe('StarWarsComponent', () => {
   let component: StarWarsComponent;
   let fixture: ComponentFixture<StarWarsComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ StarWarsComponent ],
       imports: [ HttpClientTestingModule ]
